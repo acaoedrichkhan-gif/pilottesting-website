@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finding Light in Difficult Times: A Mental Well-Being Seminar — Registration Form</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(rgba(10, 18, 30, .78), rgba(10, 18, 30, .9)),
+        radial-gradient(circle at top, #334a61 0%, #111827 55%, #070b12 100%);
+      color: #f5f7fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 850px;
+      background: rgba(20, 29, 43, .96);
+      border: 1px solid #718096;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.45);
+      overflow: hidden;
+    }
+
+    .header {
+      text-align: center;
+      padding: 34px 25px 25px;
+      background: linear-gradient(135deg, #243447, #3d5a66);
+      border-bottom: 1px solid #53657a;
+    }
+
+    .helmet {
+      font-size: 48px;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    form { padding: 30px; }
+
+    .section-title {
+      margin: 4px 0 18px;
+      color: #f6c453;
+      font-size: 19px;
+      border-bottom: 1px solid #405268;
+      padding-bottom: 9px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .full { grid-column: 1 / -1; }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: 600;
+      color: #e5e7eb;
+      font-size: 14px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border-radius: 9px;
+      border: 1px solid #53657a;
+      background: #0f1724;
+      color: white;
+      font-size: 15px;
+      outline: none;
+      transition: .2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #f6c453;
+      box-shadow: 0 0 0 3px rgba(246,196,83,.12);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 95px;
+    }
+
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 22px;
+      margin-top: 5px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-weight: normal;
+    }
+
+    .option input {
+      width: auto;
+      accent-color: #f6c453;
+    }
+
+    .terms {
+      margin: 25px 0;
+      padding: 15px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.04);
+      color: #cbd5e1;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .terms label {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      font-weight: normal;
+      color: #cbd5e1;
+    }
+
+    .terms input {
+      width: auto;
+      margin-top: 3px;
+      accent-color: #f6c453;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 14px 20px;
+      background: #f6c453;
+      color: #17202d;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .15s, background .15s;
+    }
+
+    button:hover {
+      background: #ffd76f;
+      transform: translateY(-1px);
+    }
+
+    .success {
+      display: none;
+      margin: 20px 0 0;
+      padding: 16px;
+      border-radius: 10px;
+      background: #123b2a;
+      border: 1px solid #2f855a;
+      color: #c6f6d5;
+      text-align: center;
+    }
+
+    .footer {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 12px;
+      padding: 0 30px 25px;
+    }
+
+    .required { color: #f87171; }
+
+    @media (max-width: 650px) {
+      .grid { grid-template-columns: 1fr; }
+      .full { grid-column: auto; }
+      form { padding: 22px; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="helmet">☀️</div>
+      <h1>Finding Light in Difficult Times: A Mental Well-Being Seminar</h1>
+      <p class="subtitle">Registration Form • A safe space to learn, connect, reflect, and find hope.</p>
+    </header>
+
+    <form id="registrationForm" novalidate>
+      <h2 class="section-title">Participant Information</h2>
+
+      <div class="grid">
+        <div>
+          <label for="firstName">First Name <span class="required">*</span></label>
+          <input id="firstName" name="firstName" type="text" required>
+        </div>
+
+        <div>
+          <label for="lastName">Last Name <span class="required">*</span></label>
+          <input id="lastName" name="lastName" type="text" required>
+        </div>
+
+        <div>
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input id="email" name="email" type="email" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" placeholder="+63 912 345 6789">
+        </div>
+
+        <div>
+          <label for="birthDate">Date of Birth <span class="required">*</span></label>
+          <input id="birthDate" name="birthDate" type="date" required>
+        </div>
+
+        <div>
+          <label for="country">Country <span class="required">*</span></label>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option>Philippines</option>
+            <option>United States</option>
+            <option>Canada</option>
+            <option>United Kingdom</option>
+            <option>Australia</option>
+            <option>Norway</option>
+            <option>Sweden</option>
+            <option>Denmark</option>
+            <option>Iceland</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top:30px;">Seminar Registration</h2>
+
+      <div class="grid">
+        <div>
+          <label for="role">Participant Type <span class="required">*</span></label>
+          <select id="role" name="role" required>
+            <option value="">Select participant type</option>
+            <option>Student</option>
+            <option>Faculty / Staff</option>
+            <option>School Organization Member</option>
+            <option>Guest</option>
+            <option>Community Member</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="experience">How did you hear about the seminar?</label>
+          <select id="experience" name="experience">
+            <option>School Announcement</option>
+            <option>Social Media</option>
+            <option>Friend / Classmate</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <label>What would you like to gain from this seminar?</label>
+          <div class="options">
+            <label class="option"><input type="checkbox" name="activities" value="Understanding Mental Well-Being"> Understanding Mental Well-Being</label>
+            <label class="option"><input type="checkbox" name="activities" value="Coping with Difficult Times"> Coping with Difficult Times</label>
+            <label class="option"><input type="checkbox" name="activities" value="Combat"> Building Resilience</label>
+            <label class="option"><input type="checkbox" name="activities" value="Self-Care Strategies"> Self-Care Strategies</label>
+            <label class="option"><input type="checkbox" name="activities" value="Connecting with Others"> Connecting with Others</label>
+          </div>
+        </div>
+
+        <div class="full">
+          <label for="message">What would you like to share or learn?</label>
+          <textarea id="message" name="message" placeholder="Optional: Tell us what you hope to learn, understand, or take away from this seminar..."></textarea>
+        </div>
+      </div>
+
+      <div class="terms">
+        <label>
+          <input type="checkbox" id="terms" required>
+          <span>I confirm that the information I provided is correct and I understand that this seminar is intended for education and well-being support. <span class="required">*</span></span>
+        </label>
+      </div>
+
+      <button type="submit">☀️ Submit Registration</button>
+
+      <div class="success" id="successMessage">
+        <strong>Registration successful!</strong><br>
+        Thank you for registering! Your place at the seminar has been recorded on this browser.
+      </div>
+    </form>
+
+    <div class="footer">
+      Finding Light in Difficult Times: A Mental Well-Being Seminar • Demo version • No information is sent to a server.
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById("registrationForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const data = {
+        firstName: document.getElementById("firstName").value.trim(),
+        lastName: document.getElementById("lastName").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        birthDate: document.getElementById("birthDate").value,
+        country: document.getElementById("country").value,
+        role: document.getElementById("role").value,
+        experience: document.getElementById("experience").value,
+        activities: [...document.querySelectorAll('input[name="activities"]:checked')]
+          .map(item => item.value),
+        message: document.getElementById("message").value.trim(),
+        submittedAt: new Date().toISOString()
+      };
+
+      // Save the submitted registration locally in the browser.
+      localStorage.setItem("mentalWellBeingSeminarRegistration", JSON.stringify(data));
+
+      successMessage.style.display = "block";
+      successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      form.querySelector("button").textContent = "✓ Registration Submitted";
+    });
+  </script>
+</body>
+</html>
